@@ -1,5 +1,6 @@
 package com.acciojob.librarymanagementsystems.Entities;
 
+import com.acciojob.librarymanagementsystems.CardStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,24 +10,26 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
-@Entity //This is the schema of how Student Table will look like
-@Table(name = "student_info")
+import java.util.Date;
+
+@Entity
+@Table(name = "card_info")
 @Getter
 @Setter
-@NoArgsConstructor //This is like a default constructor
-@AllArgsConstructor //This is like a constructor having all the arguments
-public class Student {
+@NoArgsConstructor
+@AllArgsConstructor
+public class LibraryCard {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int rollNo;
+    private int cardNo;
 
-    private String name;
+    private CardStatus cardStatus;
 
-    private String branch;
+    private int noOfBooksIssued;
 
-    private double cgpa;
+    private Date validity;
 
-    private String emailId;
 }
