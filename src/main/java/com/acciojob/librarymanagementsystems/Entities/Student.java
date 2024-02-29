@@ -1,5 +1,6 @@
 package com.acciojob.librarymanagementsystems.Entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,11 +23,14 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int rollNo;
 
+    @Column(nullable = false)
     private String name;
 
     private String branch;
 
-    private double cgpa;
+    @Column(nullable = false)
+    private Double cgpa;
 
+    @Column(unique = true)
     private String emailId;
 }
