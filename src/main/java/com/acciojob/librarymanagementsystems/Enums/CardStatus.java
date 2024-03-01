@@ -1,4 +1,4 @@
-package com.acciojob.librarymanagementsystems;
+package com.acciojob.librarymanagementsystems.Enums;
 
 public enum CardStatus {
     ISSUED,

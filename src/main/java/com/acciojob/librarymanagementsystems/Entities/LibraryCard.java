@@ -1,6 +1,6 @@
 package com.acciojob.librarymanagementsystems.Entities;
 
-import com.acciojob.librarymanagementsystems.CardStatus;
+import com.acciojob.librarymanagementsystems.Enums.CardStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -14,7 +14,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
 
@@ -36,7 +35,6 @@ public class LibraryCard {
     private int noOfBooksIssued;
 
     private Date validity;
-
 
     @JoinColumn //This tells that a new column is adding the the LB
     @OneToOne

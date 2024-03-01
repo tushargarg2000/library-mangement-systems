@@ -1,6 +1,6 @@
 package com.acciojob.librarymanagementsystems.Services;
 
-import com.acciojob.librarymanagementsystems.CardStatus;
+import com.acciojob.librarymanagementsystems.Enums.CardStatus;
 import com.acciojob.librarymanagementsystems.Entities.LibraryCard;
 import com.acciojob.librarymanagementsystems.Entities.Student;
 import com.acciojob.librarymanagementsystems.Repositories.CardRepository;
