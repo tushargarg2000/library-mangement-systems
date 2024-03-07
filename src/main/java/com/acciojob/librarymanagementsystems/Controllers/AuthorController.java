@@ -27,5 +27,12 @@ public class AuthorController {
         return result;
     }
 
+    @GetMapping("/getAuthorWithMaxBooks")
+    public Author getAuthor(){
+
+        Author ansAuthor = authorService.getAuthorWithMaxBooks();
+        return ansAuthor;
+    }
+
 
 }
