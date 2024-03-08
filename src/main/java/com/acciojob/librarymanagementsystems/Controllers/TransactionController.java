@@ -24,6 +24,13 @@ public class TransactionController {
         }catch (Exception e){
             return e.getMessage();
         }
+    }
 
+    @PutMapping("/returnBook")
+    public String returnBook(@RequestParam("cardId")Integer cardId,
+                             @RequestParam("bookId")Integer bookId){
+
+        String result = transactionService.returnBook(bookId,cardId);
+        return result;
     }
 }

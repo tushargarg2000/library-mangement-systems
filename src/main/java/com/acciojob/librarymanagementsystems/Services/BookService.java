@@ -27,6 +27,7 @@ public class BookService {
         if(book.getNoOfPages()<=0) {
             throw new InvalidPageCountException("Page Count entered is incorrect");
         }
+        book.setIsIssued(Boolean.FALSE);
         bookRepository.save(book);
         return "Book has been saved to the DB";
     }

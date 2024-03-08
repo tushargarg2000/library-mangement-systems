@@ -35,7 +35,7 @@ public class LibraryCard {
 
     private int noOfBooksIssued;
 
-    private LocalDate validity;
+    private Date validity;
 
     @JoinColumn //This tells that a new column is adding the the LB
     @OneToOne

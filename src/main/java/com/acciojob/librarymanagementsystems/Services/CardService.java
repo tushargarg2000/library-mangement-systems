@@ -27,8 +27,7 @@ public class CardService {
         LibraryCard card = new LibraryCard(); //This object will go the DB and save it
         card.setCardStatus(CardStatus.NEW);
         card.setNoOfBooksIssued(0);
-
-        Date expiryDate = new Date(1028,6,1);
+        Date expiryDate = new Date(128,6,1);
         card.setValidity(expiryDate);
         card = cardRepository.save(card);
         return "The card has been generated with cardId "+card.getCardNo();
